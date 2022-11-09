@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E822237291B401C00D1B4FB /* Preco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E822236291B401C00D1B4FB /* Preco.swift */; };
 		583A3A06287847E8002C6288 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A05287847E8002C6288 /* SectionTitleView.swift */; };
 		583A3A0828784C57002C6288 /* CarrinhoSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */; };
 		5840B53728646180000FA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53628646180000FA9FC /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E822236291B401C00D1B4FB /* Preco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preco.swift; sourceTree = "<group>"; };
 		583A3A05287847E8002C6288 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoSectionHeaderView.swift; sourceTree = "<group>"; };
 		5840B53328646180000FA9FC /* LearningTask-8.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-8.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 			children = (
 				5840B550286462C0000FA9FC /* Autor.swift */,
 				5840B552286462D4000FA9FC /* Livro.swift */,
+				3E822236291B401C00D1B4FB /* Preco.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				583A3A06287847E8002C6288 /* SectionTitleView.swift in Sources */,
 				5840B54F286462A3000FA9FC /* LivrosAPI.swift in Sources */,
 				5840B54B28646211000FA9FC /* Theme.swift in Sources */,
+				3E822237291B401C00D1B4FB /* Preco.swift in Sources */,
 				5840B53728646180000FA9FC /* AppDelegate.swift in Sources */,
 				5840B53928646180000FA9FC /* SceneDelegate.swift in Sources */,
 				5840B55E2864660F000FA9FC /* LivroCollectionViewCell.swift in Sources */,
