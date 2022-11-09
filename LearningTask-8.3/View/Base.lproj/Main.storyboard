@@ -199,7 +199,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-Qu-FQX" userLabel="Comprar Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-Qu-FQX" userLabel="Comprar Button">
                                                         <rect key="frame" x="301.5" y="16" width="92.5" height="43"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Comprar">
@@ -208,7 +208,6 @@
                                                             <color key="baseBackgroundColor" name="Saffron Mango"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="comprarBotaoSelecionado:" destination="CZH-uK-piZ" eventType="touchUpInside" id="kHA-yE-Eb2"/>
                                                             <segue destination="vXL-D6-ltz" kind="showDetail" identifier="seeCarrinhoViewController" id="UIB-WW-Yvi"/>
                                                         </connections>
                                                     </button>
@@ -229,23 +228,23 @@
                                                         <rect key="frame" x="0.0" y="1" width="414" height="75"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0LV-dc-QNx" userLabel="Tipo Content Stack View">
-                                                                <rect key="frame" x="20" y="16" width="67" height="43"/>
+                                                                <rect key="frame" x="20" y="16" width="72.5" height="43"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="E-book*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFX-9e-gma" userLabel="Tipo Label">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="19.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Impresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFX-9e-gma" userLabel="Tipo Label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="19.5"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="R$ 19,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYU-YF-y0C" userLabel="Preco Label">
-                                                                        <rect key="frame" x="0.0" y="23.5" width="67" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="23.5" width="72.5" height="19.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-ao-Lhr" userLabel="Comprar Button">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-ao-Lhr" userLabel="Comprar Button">
                                                                 <rect key="frame" x="301.5" y="16" width="92.5" height="43"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Comprar">
@@ -254,7 +253,6 @@
                                                                     <color key="baseBackgroundColor" name="Saffron Mango"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="comprarBotaoSelecionado:" destination="CZH-uK-piZ" eventType="touchUpInside" id="twQ-uG-5YP"/>
                                                                     <segue destination="vXL-D6-ltz" kind="showDetail" identifier="seeCarrinhoViewController" id="6rp-S4-lB0"/>
                                                                 </connections>
                                                             </button>
@@ -277,23 +275,23 @@
                                                         <rect key="frame" x="0.0" y="1" width="414" height="75"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FYT-ym-6XM" userLabel="Tipo Content Stack View">
-                                                                <rect key="frame" x="20" y="16" width="67" height="43"/>
+                                                                <rect key="frame" x="20" y="16" width="146" height="43"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="E-book*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-6u-ZoX" userLabel="Tipo Label">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="19.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="E-book + Impresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-6u-ZoX" userLabel="Tipo Label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="19.5"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="R$ 19,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-vk-8iD" userLabel="Preco Label">
-                                                                        <rect key="frame" x="0.0" y="23.5" width="67" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="23.5" width="146" height="19.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiF-6f-CvD" userLabel="Comprar Button">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiF-6f-CvD" userLabel="Comprar Button">
                                                                 <rect key="frame" x="301.5" y="16" width="92.5" height="43"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Comprar">
@@ -302,7 +300,6 @@
                                                                     <color key="baseBackgroundColor" name="Saffron Mango"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="comprarBotaoSelecionado:" destination="CZH-uK-piZ" eventType="touchUpInside" id="aBu-fc-xXY"/>
                                                                     <segue destination="vXL-D6-ltz" kind="showDetail" identifier="seeCarrinhoViewController" id="3dR-p6-uqV"/>
                                                                 </connections>
                                                             </button>
@@ -346,9 +343,6 @@
                         <outlet property="precoEbookLabel" destination="7WZ-rI-mjb" id="NwI-ML-8iT"/>
                         <outlet property="precoImpressoLabel" destination="CYU-YF-y0C" id="sVk-We-dgN"/>
                         <outlet property="subtituloLabel" destination="FrQ-c8-CBl" id="hMf-Zy-igR"/>
-                        <outlet property="tipoComboLabel" destination="Sil-6u-ZoX" id="3im-BN-qhq"/>
-                        <outlet property="tipoEbookLabel" destination="M6v-j2-eG1" id="Oeb-xG-VPB"/>
-                        <outlet property="tipoImpressoLabel" destination="CFX-9e-gma" id="K8a-TE-H2c"/>
                         <outlet property="tituloLabel" destination="5QX-LR-oXy" id="voI-5w-8Lb"/>
                     </connections>
                 </viewController>
@@ -508,7 +502,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3dR-p6-uqV"/>
+        <segue reference="UIB-WW-Yvi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoTypo" width="513.35601806640625" height="108"/>

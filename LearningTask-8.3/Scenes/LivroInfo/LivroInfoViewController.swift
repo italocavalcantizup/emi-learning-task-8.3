@@ -16,14 +16,8 @@ class LivroInfoViewController: UIViewController {
     @IBOutlet private weak var capaImageView: UIImageView!
     
     //View Tipos
-    
-    @IBOutlet weak var tipoEbookLabel: UILabel!
     @IBOutlet weak var precoEbookLabel: UILabel!
-    
-    @IBOutlet weak var tipoImpressoLabel: UILabel!
     @IBOutlet weak var precoImpressoLabel: UILabel!
-    
-    @IBOutlet weak var tipoComboLabel: UILabel!
     @IBOutlet weak var precoComboLabel: UILabel!
     
     var livro: Livro!
@@ -42,13 +36,17 @@ class LivroInfoViewController: UIViewController {
     }
     
     private func setupViewTipos() {
-        tipoEbookLabel.text = livro.precos[0].tipoDeLivro.descricao
-        tipoImpressoLabel.text = livro.precos[1].tipoDeLivro.descricao
-        tipoComboLabel.text = livro.precos[2].tipoDeLivro.descricao
-        
-        precoEbookLabel.text = Formatter.paraMoeda(decimal: livro.precos[0].valor)
-        precoImpressoLabel.text = Formatter.paraMoeda(decimal: livro.precos[1].valor)
-        precoComboLabel.text = Formatter.paraMoeda(decimal: livro.precos[2].valor)
+        for preco in livro.precos {
+            let valor = Formatter.paraMoeda(decimal: preco.valor)
+            switch preco.tipoDeLivro {
+            case .ebook:
+                precoEbookLabel.text = valor
+            case .impresso:
+                precoImpressoLabel.text = valor
+            case .combo:
+                precoComboLabel.text = valor
+            }
+        }
     }
     
     private func setupViewSuperior() {
@@ -58,21 +56,13 @@ class LivroInfoViewController: UIViewController {
         capaImageView.image = UIImage(named: livro.imagemDeCapaURI)
     }
     
-    
-    @IBAction func comprarBotaoSelecionado(_ sender: UIButton) {
-        guard let tipo = TipoDeLivro.allCases.filter({ $0.rawValue == sender.tag }).first else {
-            fatalError("Não foi possível determinar o tipo de livro")
-        }
-        tipoSelecionado = tipo
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "seeCarrinhoViewController" else { return }
-        guard let destino = segue.destination as? CarrinhoViewController else {
+        guard let botao = sender as? UIButton,
+              let destino = segue.destination as? CarrinhoViewController else {
             fatalError("Não foi possível executar a segue: \(segue.identifier!)")
         }
-        destino.tipoDeLivro = tipoSelecionado
-        destino.livro = livro
+        destino.carrinho = Carrinho.criarCarrinho(com: livro, doTipo: TipoDeLivro(rawValue: botao.tag)!)
     }
     
 }

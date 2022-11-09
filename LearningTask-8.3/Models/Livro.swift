@@ -22,3 +22,25 @@ struct Livro {
         self.precos = precos
     }
 }
+
+struct Preco {
+    var valor: Decimal
+    var tipoDeLivro: TipoDeLivro
+}
+
+enum TipoDeLivro: Int, CaseIterable {
+    case ebook = 0
+    case impresso = 1
+    case combo = 2
+    
+    var descricao: String {
+        switch self {
+        case .ebook:
+            return "E-book*"
+        case .impresso:
+            return "Impresso"
+        case .combo:
+            return "E-book + Impresso"
+        }
+    }
+}

@@ -12,37 +12,47 @@ class CarrinhoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var valorTotalLabel: UILabel!
     
-    var tipoDeLivro: TipoDeLivro!
-    var livro: Livro!
+    var carrinho: Carrinho? {
+        didSet {
+            guard isViewLoaded, let carrinho = carrinho else { return }
+            atualizaViews(com: carrinho)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         applyTheme()
         // Do any additional setup after loading the view.
         setupViews()
+        
+        if let carrinho = carrinho {
+            atualizaViews(com: carrinho)
+        }
+    }
+    
+    func atualizaViews(com carrinho: Carrinho) {
+        tableView.reloadData()
+        valorTotalLabel.text = Formatter.paraMoeda(decimal: carrinho.total)
     }
     
     private func setupViews() {
         tableView.register(CarrinhoSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: CarrinhoSectionHeaderView.reuseId)
         tableView.sectionHeaderHeight = CarrinhoSectionHeaderView.alturaBase
         tableView.sectionHeaderTopPadding = 0
-        
-        valorTotalLabel.text = Formatter.paraMoeda(decimal: livro.precos[tipoDeLivro.rawValue - 1].valor)
     }
 }
 
 extension CarrinhoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return carrinho?.itens.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDeCompraTableViewCell") as? ItemDeCompraTableViewCell else {
             fatalError("Não foi possível obter célula para a lista")
         }
-        cell.livro = livro
-        cell.preco = livro.precos[tipoDeLivro.rawValue - 1]
+        cell.itemDeCompra = carrinho?.itens[indexPath.row]
         return cell
     }
 }
@@ -55,5 +65,9 @@ extension CarrinhoViewController: UITableViewDelegate {
         }
         header.titulo = "Seu carrinho de compras"
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
