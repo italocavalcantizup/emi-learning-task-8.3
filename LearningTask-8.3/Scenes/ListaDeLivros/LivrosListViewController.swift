@@ -28,6 +28,16 @@ class LivrosListViewController: UICollectionViewController {
         guard let livrosAPI = livrosAPI else { return }
         livros = livrosAPI.carregaTodos()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "seeLivroInfoViewController" else { return }
+        
+        guard let cell = sender as? LivroCollectionViewCell,
+              let destination = segue.destination as? LivroInfoViewController else {
+            fatalError("Não foi possível executar segue \(segue.identifier!)")
+        }
+        destination.livro = cell.livro
+    }
 
 }
 

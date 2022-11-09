@@ -8,12 +8,23 @@
 import Foundation
 
 struct Preco {
-    var valor: Double
+    var valor: Decimal
     var tipoDeLivro: TipoDeLivro
+}
+
+enum TipoDeLivro: Int, CaseIterable {
+    case ebook = 1
+    case impresso = 2
+    case combo = 3
     
-    enum TipoDeLivro: String {
-        case ebook = "E-book"
-        case impresso = "Impresso"
-        case combo = "E-book + impresso"
+    var descricao: String {
+        switch self {
+        case .ebook:
+            return "E-book*"
+        case .impresso:
+            return "Impresso"
+        case .combo:
+            return "E-book + Impresso"
+        }
     }
 }
